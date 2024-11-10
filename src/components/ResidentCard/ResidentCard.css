@@ -1,0 +1,51 @@
+.card {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: rgb(4, 43, 44);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-status {
+  position: absolute;
+  width: 75%;
+  top: 10px;
+  left: 0.5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.card-label {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-info {
+  color: gray;
+  font-size: 18px;
+  text-align: center;
+}
+
+.icon-alive {
+  color: green;
+  font-size: 20px;
+}
+
+.icon-dead {
+  color: red;
+  font-size: 20px;
+}
+
+.icon-unknow {
+  color: yellow;
+  font-size: 20px;
+}
