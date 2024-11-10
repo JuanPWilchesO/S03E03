@@ -52,11 +52,19 @@ function Search({ setLocationApp }) {
   } 
 
   const setLocation = () => {
+    let found = false
     for (const loc of arrLocations){
       if(inputValue === loc.name){
         setLocationApp(loc.id)
+        found = true
         break;
       }
+    }
+    if (!found){
+      setError("Planeta no encontrado")
+      setTimeout(() => {
+        setError(null)
+      }, 3000)
     }
   }
 
@@ -90,6 +98,11 @@ function Search({ setLocationApp }) {
           </ul>
         )}
       </div>
+      {error ? (
+        <div className='alert alert-danger text-bg-danger' role='alert'>
+          {error}
+        </div>
+      ) : <></>}
     </div>
   )
 }
